@@ -41,9 +41,12 @@ class Technonextpay
         }
 
         $trxn_data = $this->prepareTransactionPayload($payload);
-        if (!$validation->Validation($trxn_data))
-            throw new TechnonextpayException("Payment data validation failed", 0, null);
-
+        $validationResult = $validation->ValidationWithDetails($trxn_data);
+        if (!$validationResult['valid']) {
+            $errorMessage = "Payment data validation failed: " . implode("; ", $validationResult['errors']);
+            throw new TechnonextpayException($errorMessage, 0, null);
+        }
+		
         $header = array(
             'Content-Type:application/json'
         );
