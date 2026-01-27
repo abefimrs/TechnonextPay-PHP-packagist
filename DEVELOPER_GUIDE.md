@@ -220,11 +220,10 @@ cp .env.example .env
 Then edit the `.env` file with your actual merchant credentials:
 
 ```env
-USERNAME=your_merchant_username
-PASSWORD=your_merchant_password
+API_KEY=your_merchant_api_key
+API_SECRET=your_merchant_api_secret
 MERCHANT_CODE=your_merchant_code
 TechnonextPay_API_ENDPOINT=https://api.technonextpay.com
-SIGNATURE=your_signature
 SUCCESS_URL=https://yourdomain.com/success
 FAILURE_URL=https://yourdomain.com/failure
 CANCEL_URL=https://yourdomain.com/cancel

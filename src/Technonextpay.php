@@ -94,11 +94,6 @@ class Technonextpay
         return json_encode(
             array(
                 'order_id' => $this->conf->order_prefix . uniqid(),
-                'security' => array(
-                    'username' => $this->conf->username,
-                    'password' => $this->conf->password
-                ),
-                'signature' => $this->conf->signature,
                 'order_information'=> array(
                     'payable_amount' => $payload->payable_amount,
                     'currency_code' => $payload->currency_code
