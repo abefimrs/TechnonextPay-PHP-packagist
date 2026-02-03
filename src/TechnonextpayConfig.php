@@ -4,16 +4,14 @@ namespace TechnonextPlugin;
 
 class TechnonextpayConfig
 {
-    /** merchant store username assigned by Technonextpay system */
-    public $username;
-
-    /** merchant store password assigned by Technonextpay system */
-    public $password;
-
-    /** Merchant signature used to generate order id */
-    public $signature;
-
+    /** Technonextpay merchant code; e.g. TNX12345 */
     public $merchant_code;
+    
+    /** Technonextpay merchant API key  */  
+    public $api_key;
+
+    /** Technonextpay merchant API secret  */
+    public $api_secret;
 
     /** Technonextpay payment gateway API endpoint; e.g. https://sandbox.Technonextpayment.com */
     public $api_endpoint;

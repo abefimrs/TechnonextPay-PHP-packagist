@@ -55,11 +55,10 @@ class TechnonextpayEnvReader
     {
         $this->load();
         $config = new TechnonextpayConfig();
-        $config->username = getenv('USERNAME');
-        $config->password = getenv('PASSWORD');
         $config->merchant_code = getenv('MERCHANT_CODE');
+        $config->api_key = getenv('API_KEY');
+        $config->api_secret = getenv('API_SECRET');
         $config->api_endpoint = getenv('TechnonextPay_API_ENDPOINT');      
-        $config->signature = getenv('SIGNATURE');
         $config->success_url = getenv('SUCCESS_URL');
         $config->failure_url = getenv('FAILURE_URL');       
         $config->cancel_url = getenv('CANCEL_URL');
